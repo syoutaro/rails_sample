@@ -6,6 +6,10 @@
     %br/
     = f.email_field :email, autofocus: true, class: "form-control col-md-5 col-sm", placeholder: "Enter email"
   .form-group
+    = f.label :name
+    %br/
+    = f.text_field :name, class: "form-control col-md-5 col-sm", placeholder: "Username"
+  .form-group
     = f.label :password
     - if @minimum_password_length
       %em
