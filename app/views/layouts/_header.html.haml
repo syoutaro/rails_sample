@@ -2,7 +2,11 @@
   .container
     = link_to ApplicationHelper::APP_NAME, root_path, id: "logo"
     - if user_signed_in?
-      %ul.nav-justify-content-end
+      %ul.navbar-nav
+        %li.nav-item.dropdown
+          = link_to("#", id: "navbarDropdownMenuLink", class: "nav-link dropdown-toggle", "data-toggle": "dropdown", "data-flip": "true","aria-haspopup": "false", "aria-expanded": "false") do
+            = image_tag current_user.avatar.url, class: "rounded-circle", style: "width: 50px;"
+
         %li.nav-item
           = link_to "プロフィール編集", edit_user_registration_path, class: "nav-link text-secondary"
         %li.nav-item

@@ -14,6 +14,10 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  name                   :string
+#  avatar_file_name       :string
+#  avatar_content_type    :string
+#  avatar_file_size       :integer
+#  avatar_updated_at      :datetime
 #
 
 require 'test_helper'

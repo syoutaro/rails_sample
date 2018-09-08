@@ -1,2 +1,7 @@
-%h1
-  Hello, #{@user.name}
+.col-md-3.col-12.d-none.d-md-block
+  .card.p-2
+    = image_tag current_user.avatar.url, class: "card-img-top rounded-circle"
+    .card-body
+      %h4.card-title= "@#{@user.name}"
+      %p.card-text
+        %span.text-secondary= "ユーザー情報が入ります"
