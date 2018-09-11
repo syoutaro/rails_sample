@@ -5,7 +5,11 @@
       .card-body
         %h4.card-title= "@#{@user.name}"
         %p.card-text
-          %span.text-secondary= "ユーザー情報が入ります"
+          %span.text-secondary= "#{@user.created_month}に登録"
+          %br
+          %span.text-secondary
+          投稿数
+          = @user.posts_count
 
 .col-md-9.col-12
   = form_with model: Post.new do |f|

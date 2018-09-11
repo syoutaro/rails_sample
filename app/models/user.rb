@@ -18,6 +18,7 @@
 #  avatar_content_type    :string
 #  avatar_file_size       :integer
 #  avatar_updated_at      :datetime
+#  posts_count            :integer          default(0), not null
 #
 
 class User < ApplicationRecord
@@ -50,6 +51,10 @@ class User < ApplicationRecord
 
   def login
     @login || self.name || self.email
+  end
+
+  def created_month
+    created_at.strftime('%Y年%m月')
   end
 
   def self.find_for_database_authentication(warden_conditions)
