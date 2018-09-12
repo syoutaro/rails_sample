@@ -19,6 +19,7 @@
 #  avatar_file_size       :integer
 #  avatar_updated_at      :datetime
 #  posts_count            :integer          default(0), not null
+#  role                   :integer          default(0), not null
 #
 
 class User < ApplicationRecord
@@ -29,6 +30,8 @@ class User < ApplicationRecord
 
   validates_format_of :name, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
   validate :validate_username
+
+  enum role: { user: 0, admin: 1 }
 
   attr_accessor :login
   # Include default devise modules. Others available are:
