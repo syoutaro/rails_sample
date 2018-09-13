@@ -3,7 +3,7 @@
   .form-group
     = f.label "email or username"
     %br/
-    = f.email_field :login, autofocus: true, class: "form-control col-md-5 col-sm", placeholder: "Enter email or username"
+    = f.text_field :login, autofocus: true, class: "form-control col-md-5 col-sm", placeholder: "Enter email or username"
   .form-group
     = f.label :password
     %br/

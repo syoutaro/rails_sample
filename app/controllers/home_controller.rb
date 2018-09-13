@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
     @user = current_user
-    @posts = Post.order('created_at desc').page params[:page]
+    @posts = Post.page(params[:page]).per(8).order('updated_at DESC')
   end
 end

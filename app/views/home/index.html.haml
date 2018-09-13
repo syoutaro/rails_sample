@@ -11,12 +11,12 @@
           投稿数
           = @user.posts_count
 
-.col-md-9.col-12
-  = form_with model: Post.new do |f|
-    .input-group.pb-4.mx-0
-      = f.text_field :body, class: "form-control", placeholder: "今なにしている？"
-      %span.input-group-btn
-        = f.submit "投稿", class: "btn btn-primary"
+  .col-md-9.col-12
+    = form_with model: Post.new do |f|
+      .input-group.pb-4.mx-0
+        = f.text_field :body, class: "form-control", placeholder: "今なにしている？"
+        %span.input-group-btn
+          = f.submit "投稿", class: "btn btn-primary"
 
-  = render partial: "post", collection: @posts
-  = paginate @posts
+    = render partial: "post", collection: @posts
+    = paginate @posts

@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   def create
     if current_user.posts.create(post_params)
-      flash[:notice] = 'Post was successfully created.'
+      flash[:notice] = '投稿しました。'
     else
-      flash[:error] = 'Something went wrong'
+      flash[:error] = '投稿に失敗しました。'
     end
 
     redirect_to :root
