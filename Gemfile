@@ -15,6 +15,7 @@ gem 'counter_culture'
 gem 'activeadmin'
 gem 'rails-i18n'
 gem 'aws-sdk'
+gem 'rails_12factor', group: :production
 gem 'paperclip',      '6.0.0'
 gem 'puma',           '3.9.1'
 gem 'sass-rails',     '5.0.6'
