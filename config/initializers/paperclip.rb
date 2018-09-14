@@ -1,0 +1,1 @@
+Paperclip::Attachment.default_options[:url] = 'syourailssample.s3.amazonaws.com'
